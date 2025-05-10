@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+
+  ecommerce-orders-api:
+    build:
+      context: .
+      dockerfile: ECommerce.Orders.Api/Dockerfile
+    ports:
+      - "5010:5010"
+    networks:
+      - ecommerce-network
+
+  ecommerce-categories-api:
+    build:
+      context: .
+      dockerfile: ECommerce.Categories.Api/Dockerfile
+    ports:
+      - "5020:5020"
+    networks:
+      - ecommerce-network
+
+  ecommerce-inventories-api:
+    build:
+      context: .
+      dockerfile: ECommerce.Inventories.Api/Dockerfile
+    ports:
+      - "5030:5030"
+    networks:
+      - ecommerce-network
+
+  ecommerce-products-api:
+    build:
+      context: .
+      dockerfile: ECommerce.Products.Api/Dockerfile
+    ports:
+      - "5040:5040"
+    networks:
+      - ecommerce-network
+
+networks:
+  ecommerce-network:
+    driver: bridge

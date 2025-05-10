@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ECommerce.Inventories.Api": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

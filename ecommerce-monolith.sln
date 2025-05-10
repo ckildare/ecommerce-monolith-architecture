@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E04602A0-DE88-46AA-B2C4-FD1D2404CF53}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Categories.Api", "ECommerce.Categories.Api\ECommerce.Categories.Api.csproj", "{FF0D22CE-6BF1-449E-B2A4-AA0DFE46A99D}"
 EndProject
