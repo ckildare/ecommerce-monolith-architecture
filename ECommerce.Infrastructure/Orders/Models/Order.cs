@@ -117,7 +117,7 @@ public record Order : Aggregate<OrderId>
     {
         TotalPrice = TotalPrice.Of(_orderItems.Sum(item => item.CalculatePrice()));
 
-        if (TotalPrice.Value < 50000)
+        if (TotalPrice.Value < 0)
             throw new InvalidTotalPriceRangeException(TotalPrice.Value);
 
         var @event = new OrderTotalPriceAddedDomainEvent(Id.Value, CustomerId.Value, OrderDate,
